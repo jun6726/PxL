@@ -2,26 +2,29 @@
   <v-app>
     <TodoHeader></TodoHeader>
     <TodoInput></TodoInput>
-    <TodoList></TodoList>
+    <TodoLists></TodoLists>
     <TodoFooter></TodoFooter>
   </v-app>
 </template>
 
+<style scope>
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+html, body { font-family: 'Itim', sans-serif; }
+#app { font-family: 'Itim', sans-serif;}
+</style>
+
 <script>
 import TodoHeader from './components/TodoHeader.vue';
 import TodoInput from './components/TodoInput.vue';
-import TodoList from './components/TodoList.vue';
+import TodoLists from './components/TodoLists.vue';
 import TodoFooter from './components/TodoFooter.vue';
 
 export default {
-  name: 'TodoList2',
-
   components: {
     'TodoHeader' : TodoHeader,
     'TodoInput' : TodoInput,
-    'TodoList' : TodoList,
+    'TodoLists' : TodoLists,
     'TodoFooter' : TodoFooter,
   },
-
 }
 </script>
