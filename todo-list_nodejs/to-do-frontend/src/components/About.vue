@@ -1,16 +1,16 @@
+<!-- to-do-frontdend/src/components/About.vue -->
 <template>
-  <div class="hello">
-    오늘의 할 일
-    {{toDoItems}}
+  <div class="about">
+    {{msg}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'about',
   data: () => {
     return {
-      toDoItems: ['1. ', '2, ']
+      msg: 'Woody가 따라한 To Do 앱'
     }
   }
 }
