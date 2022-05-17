@@ -1,16 +1,46 @@
 <template>
     <article>
-        <ul>
-            <li v-for = "todoItem in todoItems" v-bind:key="todoItem">
-                {{ todoItem }}
-                <button class="removeBtn" v-on:click="removeTodo(todoItem,index)">delete</button>
+        <ul class="todo-list__content">
+            <li v-for = "todoItem in todoItems" v-bind:key="todoItem" class="todo-list__item">
+                <v-btn class="todo-list__check-btn ma-2" color="secondary" dark>
+                    <v-icon dark right>mdi-checkbox-marked-circle</v-icon>
+                </v-btn>
+                <span class="todo-list__info">{{ todoItem }}</span> 
+                <v-btn color="warning" class="todo-list__remove-btn ma-2" dark v-on:click="removeTodo(todoItem,index)">
+                    <v-icon>
+                        mdi-minus-circle
+                    </v-icon>
+                </v-btn>
             </li>
         </ul>
     </article>
 </template>
 
-<style scoped>
-.removeBtn{ border: 1px solid red; }
+<style lang="scss" scoped>
+.todo-list__content{
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
+    .todo-list__item{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+        .todo-list__info{
+            display: block;
+            padding: 1rem 0;
+            height: 100%;
+        }
+    }
+    .todo-list__remove-btn {
+        padding: 0.5rem; 
+    }    
+}
+
 </style>
 
 <script>
