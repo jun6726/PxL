@@ -35,7 +35,11 @@ fun main(args: Array<String>) {
     println()
     println(mNumberList)
 
-    val mNumberSet = mutableListOf<Int>(1,2,3,4,4,4)
+    val mNumberSet = mutableSetOf<Int>(1,2,3,4,4,4)
     mNumberSet.add(10)
     println(mNumberSet)
+
+    val mNumberMap = mutableMapOf<String, Int>("one" to 1)
+    mNumberMap.put("two", 2)
+    println(mNumberMap)
 }
