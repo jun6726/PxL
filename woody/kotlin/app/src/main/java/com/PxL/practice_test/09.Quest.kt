@@ -3,7 +3,7 @@ package com.PxL.practice_test
 fun main(array :Array<String>) {
     first()
     second(80)
-    second(68)
+    secondSol(68)
     third(11)
     gugudan(2)
     gugudan(214)
@@ -62,6 +62,15 @@ fun second(score :Int) {
     }
 
     println(grade)
+}
+
+fun secondSol(scoreSol: Int) :String {
+    when (scoreSol) {
+        in 90..100 -> return "A"
+        in 80..89 -> return "B"
+        in 70..79 -> return "C"
+        else -> return "F"
+    }
 }
 
 /*3번 문제
